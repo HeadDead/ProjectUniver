@@ -1,4 +1,4 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.config.jwt.JwtUtils;
 import com.example.ProjectUniver.dto.*;
@@ -6,11 +6,12 @@ import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.exception.GlobalException;
 import com.example.ProjectUniver.repository.RoleRepository;
 import com.example.ProjectUniver.repository.UserRepository;
+import com.example.ProjectUniver.service.EmailService;
+import com.example.ProjectUniver.service.OrganizationService;
+import com.example.ProjectUniver.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,6 +21,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.mail.MessagingException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -43,6 +45,8 @@ public class UserServiceImp implements UserService {
     private ModelMapper modelMapper;
     @Autowired
     private OrganizationService organizationService;
+    @Autowired
+    private EmailService emailService;
 
 
     @Override
@@ -67,7 +71,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public MessageResponse registration(RegistrationDto registrationDto) {
+    public MessageResponse registration(RegistrationDto registrationDto) throws MessagingException {
         if (actorRepository.existsByLogin(registrationDto.getUsername())) {
 //            throw new GlobalException("Ошибка: Пользователь с таким логином уже зарегистрирован!", HttpStatus.BAD_REQUEST);
             return new MessageResponse("Ошибка: Пользователь с таким логином уже зарегистрирован!");
@@ -98,6 +102,11 @@ public class UserServiceImp implements UserService {
                 break;
         }
         user.setRoles(roles);
+
+        // TODO: Прикрутите авторизацию по почте
+        /*emailService.sendEmail(user.getEmail());*/
+
+
         actorRepository.save(user);
         return new MessageResponse("Пользователь " + user.getLogin() + " успешно зарегистрирован!");
     }
@@ -121,12 +130,10 @@ public class UserServiceImp implements UserService {
         String requestRole = registrationOrganizationDto.getRole();
         Set<Role> roles = new HashSet<>();
 
-        switch (requestRole) {
-            case "ROLE_ORGANIZATION":
-                Role roleStudent = roleRepository.findByName(ERole.ROLE_USER)
-                        .orElseThrow(() -> new GlobalException("Роль 'Организация' не найдена", HttpStatus.BAD_REQUEST));
-                roles.add(roleStudent);
-                break;
+        if ("ROLE_ORGANIZATION".equals(requestRole)) {
+            Role roleStudent = roleRepository.findByName(ERole.ROLE_USER)
+                    .orElseThrow(() -> new GlobalException("Роль 'Организация' не найдена", HttpStatus.BAD_REQUEST));
+            roles.add(roleStudent);
         }
         user.setRoles(roles);
         Organization organization = convertToOrganization(registrationOrganizationDto);
@@ -140,7 +147,6 @@ public class UserServiceImp implements UserService {
         actorRepository.save(user);
         return new MessageResponse("Организация " + user.getLogin() + " успешно зарегистрирована!");
     }
-
 
     @Override
     public User findUserByLogin(String login) {
@@ -161,8 +167,6 @@ public class UserServiceImp implements UserService {
         actorRepository.save(newActor);
         return newActor;
     }
-
-
 
     private User convertToUser(UpdateDto actorDto) {
         return modelMapper.map(actorDto, User.class);
