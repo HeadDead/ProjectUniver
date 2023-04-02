@@ -3,7 +3,7 @@ package com.example.ProjectUniver.config;
 
 import com.example.ProjectUniver.config.jwt.AuthEntryPointJwt;
 import com.example.ProjectUniver.config.jwt.AuthTokenFilter;
-import com.example.ProjectUniver.service.UserDetailsServiceImpl;
+import com.example.ProjectUniver.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,14 +32,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200")
+                .allowedOrigins("http://localhost:3000") //4200
                 .allowedMethods("*");
     }
     private static final String[] AUTH_WHITELIST = {
             "/swagger-resources/**",
             "/swagger-ui.html",
             "/v2/api-docs",
-            "/webjars/**"
+            "/webjars/**",
     };
     @Autowired
     private UserDetailsServiceImpl userDetailsService;

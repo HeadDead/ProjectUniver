@@ -1,6 +1,6 @@
 package com.example.ProjectUniver.config.jwt;
 
-import com.example.ProjectUniver.service.UserDetailsServiceImpl;
+import com.example.ProjectUniver.service.impl.UserDetailsServiceImpl;
 
 import java.io.IOException;
 
@@ -20,7 +20,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @NoArgsConstructor
 @Configuration

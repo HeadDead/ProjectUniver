@@ -1,9 +1,6 @@
 package com.example.ProjectUniver.service;
 
-import com.example.ProjectUniver.entity.Address;
-import com.example.ProjectUniver.entity.AddressType;
-import com.example.ProjectUniver.entity.Application;
-import com.example.ProjectUniver.entity.ServiceDop;
+import com.example.ProjectUniver.entity.*;
 
 public interface ApplicationService {
 

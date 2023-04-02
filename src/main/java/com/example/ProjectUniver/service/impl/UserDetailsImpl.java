@@ -1,4 +1,4 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.entity.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
