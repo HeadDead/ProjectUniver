@@ -1,14 +1,13 @@
 package com.example.ProjectUniver.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 @Data
@@ -32,7 +31,7 @@ public class User {
 
     @ManyToMany
     @JsonIgnore
-    private  List<Application> approveApplication;
+    private List<Application> approveApplication;
 
     private String password;
 
@@ -42,16 +41,14 @@ public class User {
 
     private boolean isMailing;
 
-
     private String resetPasswordToken;
-
 
     public User() {
     }
 
     public User(String email,
-                  String login, String password,
-                 String firstName, String lastName, String patronymic, String phoneNumber) {
+                String login, String password,
+                String firstName, String lastName, String patronymic, String phoneNumber) {
         this.email = email;
         this.login = login;
         this.password = password;
