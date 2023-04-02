@@ -10,10 +10,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -34,12 +32,14 @@ public class RegisterController {
         return new ResponseEntity<>(actorService.login(loginDto), HttpStatus.OK);
     }
 
+
     @PostMapping("auth/registrationuser")
     @Operation(summary = "Регистрация")
     public ResponseEntity<MessageResponse> registerUser(@RequestBody RegistrationDto registrationDto) {
         return new ResponseEntity<>(actorService.registration(registrationDto), HttpStatus.OK);
-
     }
+
+
     @PostMapping("auth/registration")
     @Operation(summary = "Регистрация")
     public ResponseEntity<MessageResponse> registerOrganization(@RequestBody RegistrationOrganizationDto registrationOrganizationDto) {

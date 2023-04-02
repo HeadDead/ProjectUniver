@@ -14,4 +14,5 @@ public class RegistrationDto {
     private String password;
     private String email;
     private String role;
+
 }
