@@ -22,8 +22,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
-
-
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -35,6 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
                 .allowedOrigins("http://localhost:4200")
                 .allowedMethods("*");
     }
+
     private static final String[] AUTH_WHITELIST = {
             "/swagger-resources/**",
             "/swagger-ui.html",
@@ -77,14 +76,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-
-
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
-                .antMatchers("/auth/**", "/swagger-ui/**","/forgot_password/**","/event/photos/**").permitAll()
+                .antMatchers("/auth/**", "/swagger-ui/**", "/forgot_password/**", "/event/photos/**",
+                        "/swagger-ui/**", "/forgot_password/**", "/event/photos/**",
+                        "/confirm-account", "/index", "/js/**", "/webapps/**").permitAll()
                 .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .antMatchers("/organization/**").hasAuthority("ROLE_ORGANIZATION")
                 .anyRequest().authenticated();
