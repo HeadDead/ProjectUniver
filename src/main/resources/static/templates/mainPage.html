@@ -4,53 +4,16 @@
     <title>Главная страница</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        body {
-            background-color: #0b0b0b;
-            color: #f6d295;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
-        }
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-        }
-        .btn-container button {
-            background-color: #01a0db;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn-container button:hover {
-            background-color: #02a686;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/mainPage.css">
+    <link rel="stylesheet" href="../css/rostov.css">
 </head>
 <body>
 <h1>Добро пожаловать на наш сайт!</h1>
 <div class="btn-container">
-    <button onclick='location.href="/auth/login"'>Войти</button>
-    <button onclick='location.href="/auth/registration"'>Регистрация организации</button>
-    <button onclick='location.href="/auth/registrationuser"'>Регистрация пользователя</button>
-
+    <button onclick='location.href="login.html"'>Войти</button>
+    <button onclick='location.href="registrationOrganization.html"'>Регистрация организации</button>
+    <button onclick='location.href="registrationUser.html"'>Регистрация пользователя</button>
 </div>
 </body>
 </html>

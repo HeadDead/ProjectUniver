@@ -3,7 +3,7 @@ package com.example.ProjectUniver.config;
 
 import com.example.ProjectUniver.config.jwt.AuthEntryPointJwt;
 import com.example.ProjectUniver.config.jwt.AuthTokenFilter;
-import com.example.ProjectUniver.service.UserDetailsServiceImpl;
+import com.example.ProjectUniver.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

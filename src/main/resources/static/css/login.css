@@ -1,0 +1,107 @@
+/* Фоновый цвет страницы */
+body {
+    background-color: #191919;
+}
+
+/* Цвет текста на странице */
+body,
+input,
+button,
+label {
+    color: #fff;
+    font-family: 'Rostov', sans-serif;
+}
+
+/* Стили для контейнера */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* Стили для заголовка */
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #191919;
+
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+.login {
+
+    color: #191919;
+}
+.password {
+
+    color: #191919;
+}
+
+/* Стили для форм-групп */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стили для поля ввода */
+.form-control {
+    background-color: #cef7ef;
+    color: #191919;
+    border: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Стили для кнопки "Показать" */
+.btn-light {
+    background-color: #7e7e7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+
+}
+
+/* Стили для кнопки "Войти" */
+.btn-primary {
+    background-color: #191919;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #02a686;
+}
+
+/* Стили для обязательного поля ввода */
+input[required] {
+    box-shadow: none;
+    outline: none;
+    border-color: #f6d295;
+}
+
+input[required]:focus {
+    /*box-shadow: none;
+    outline: none;
+    border-color: #f6d295;*/
+}
+
+.input-group-append {
+    margin-top: 10px;
+}
+.input:focus {
+    border: 10px black;
+}

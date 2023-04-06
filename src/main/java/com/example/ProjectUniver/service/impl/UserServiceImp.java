@@ -1,4 +1,4 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.config.jwt.JwtUtils;
 import com.example.ProjectUniver.dto.*;
@@ -6,11 +6,11 @@ import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.exception.GlobalException;
 import com.example.ProjectUniver.repository.RoleRepository;
 import com.example.ProjectUniver.repository.UserRepository;
+import com.example.ProjectUniver.service.OrganizationService;
+import com.example.ProjectUniver.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

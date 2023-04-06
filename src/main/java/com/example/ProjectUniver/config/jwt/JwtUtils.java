@@ -1,6 +1,6 @@
 package com.example.ProjectUniver.config.jwt;
 
-import com.example.ProjectUniver.service.UserDetailsImpl;
+import com.example.ProjectUniver.service.impl.UserDetailsImpl;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;

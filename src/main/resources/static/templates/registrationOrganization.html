@@ -8,76 +8,70 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function showPassword() {
-            var password = document.getElementById("password");
-            if (password.type === "password") {
-                password.type = "text";
-            } else {
-                password.type = "password";
-            }
-        }
-    </script>
+    <script type="text/javascript" src="../js/showPassword.js"></script>
+    <link rel="stylesheet" href="../css/registrationOrganization.css">
+    <link rel="stylesheet" href="../css/rostov.css">
 </head>
 <body>
 <div class="container">
     <h2>Регистрация организации</h2>
-    <form action="#" th:action="@{/registrationOrganization}" th:object="${registrationOrganizationDto}" method="post">
+    <form>
         <div class="form-group">
             <label for="firstName">Имя:</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Введите имя" th:field="*{firstName}" required>
+            <input type="text" class="form-control" id="firstName" placeholder="Введите имя" required>
         </div>
         <div class="form-group">
             <label for="lastName">Фамилия:</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию" th:field="*{lastName}" required>
+            <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию" required>
         </div>
         <div class="form-group">
             <label for="patronymic">Отчество:</label>
-            <input type="text" class="form-control" id="patronymic" placeholder="Введите отчество" th:field="*{patronymic}" required>
+            <input type="text" class="form-control" id="patronymic" placeholder="Введите отчество" required>
         </div>
         <div class="form-group">
             <label for="phoneNumber">Номер телефона:</label>
-            <input type="text" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" th:field="*{phoneNumber}" required>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" required>
         </div>
         <div class="form-group">
             <label for="login">Логин:</label>
-            <input type="text" class="form-control" id="login" placeholder="Введите логин" th:field="*{login}" required>
+            <input type="text" class="form-control" id="login" placeholder="Введите логин" required>
         </div>
         <div class="form-group">
             <label for="password">Пароль:</label>
-            <input type="password" class="form-control" id="password" placeholder="Введите пароль" th:field="*{password}" required>
+            <input type="password" class="form-control" id="password" placeholder="Введите пароль" required>
         </div>
         <div class="form-group">
             <label for="email">Электронная почта:</label>
-            <input type="email" class="form-control" id="email" placeholder="Введите адрес электронной почты" th:field="*{email}" required>
+            <input type="email" class="form-control" id="email" placeholder="Введите адрес электронной почты" required>
         </div>
         <div class="form-group">
             <label for="organizationFullName">Полное название организации:</label>
-            <input type="text" class="form-control" id="organizationFullName" placeholder="Введите полное название организации" th:field="*{organizationFullName}" required>
+            <input type="text" class="form-control" id="organizationFullName"
+                   placeholder="Введите полное название организации" required>
         </div>
         <div class="form-group">
             <label for="organizationShortName">Краткое название организации:</label>
-            <input type="text" class="form-control" id="organizationShortName" placeholder="Введите краткое название организации" th:field="*{organizationShortName}" required>
+            <input type="text" class="form-control" id="organizationShortName"
+                   placeholder="Введите краткое название организации" required>
         </div>
         <div class="form-group">
             <label for="inn">ИНН:</label>
-            <input type="text" class="form-control" id="inn" placeholder="Введите ИНН" th:field="*{inn}" required>
+            <input type="text" class="form-control" id="inn" placeholder="Введите ИНН" required>
         </div>
         <div class="form-group">
             <label for="kpp">КПП:</label>
-            <input type="text" class="form-control" id="kpp" placeholder="Введите КПП" th:field="*{kpp}" required>
+            <input type="text" class="form-control" id="kpp" placeholder="Введите КПП" required>
         </div>
         <div class="form-group">
             <label for="ogrn">ОГРН:</label>
-            <input type="text" class="form-control" id="ogrn" placeholder="Введите ОГРН" th:field="*{ogrn}" required>
+            <input type="text" class="form-control" id="ogrn" placeholder="Введите ОГРН" required>
         </div>
         <div class="form-group">
             <label for="address">Юридический адрес:</label>
-            <input type="text" class="form-control" id="address" placeholder="Введите юридический адрес" th:field="*{address}" required>
+            <input type="text" class="form-control" id="address" placeholder="Введите юридический адрес" required>
         </div>
         <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
     </form>
 </div>
-<script th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.min.js}"></script>
 </body>
 </html>

@@ -2,9 +2,9 @@ package com.example.ProjectUniver.controllers;
 
 import com.example.ProjectUniver.dto.*;
 import com.example.ProjectUniver.service.OrganizationService;
-import com.example.ProjectUniver.service.OrganizationServiceImpl;
+import com.example.ProjectUniver.service.impl.OrganizationServiceImpl;
 import com.example.ProjectUniver.service.UserService;
-import com.example.ProjectUniver.service.UserServiceImp;
+import com.example.ProjectUniver.service.impl.UserServiceImp;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

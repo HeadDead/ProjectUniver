@@ -1,10 +1,11 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.repository.AddressRepository;
 import com.example.ProjectUniver.repository.AddressTypeRepository;
 import com.example.ProjectUniver.repository.ApplicationRepository;
 import com.example.ProjectUniver.repository.ServiceDopRepository;
+import com.example.ProjectUniver.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class ApplicationServiceImpl implements ApplicationService{
+public class ApplicationServiceImpl implements ApplicationService {
     @Autowired
     private ApplicationRepository applicationRepository;
     @Autowired
