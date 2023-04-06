@@ -35,3 +35,7 @@ h1 {
 .btn-container button:hover {
     background-color: #02a686;
 }
+image{
+    width: 30%;
+    height: 30%;
+}
