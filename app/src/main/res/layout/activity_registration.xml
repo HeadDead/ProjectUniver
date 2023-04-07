@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.RegistrationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/lastName"
+            android:backgroundTint="@color/green_200"
+            android:textAlignment="center"
+            android:textColorHint="@color/green_200"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Иванов"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/name"
+            android:backgroundTint="@color/green_200"
+            android:textAlignment="center"
+            android:textColorHint="@color/green_200"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Иван"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/patronymic"
+            android:textColorHint="@color/green_200"
+            android:backgroundTint="@color/green_200"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Иванович"
+            android:textAlignment="center"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:textColorHint="@color/green_200"
+            android:backgroundTint="@color/green_200"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="+79328883252"
+            android:textAlignment="center"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/email"
+            android:textColorHint="@color/green_200"
+            android:backgroundTint="@color/green_200"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="name@email.ru"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/username"
+            android:backgroundTint="@color/green_200"
+            android:textColorHint="@color/green_200"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="ivan_0v"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/password"
+            android:backgroundTint="@color/green_200"
+            android:textColorHint="@color/green_200"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Пароль"
+            android:textSize="10pt" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:onClick="buttonRegistration"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/black"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+</android.support.constraint.ConstraintLayout>

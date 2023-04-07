@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/Theme.PsutiPower"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:layout_width="750px"
+        android:layout_height="750px"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/linearButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/clientButton"
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/user"
+            android:onClick="clientButton"
+            android:textColor="@color/white"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/organizationButton"
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/org"
+            android:onClick="organizationButton"
+            android:textColor="@color/white"
+            android:textSize="8pt" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:textColor="@color/black"
+        android:onClick="adminButton"
+        android:text="Администрирование"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearButtons" />
+
+</android.support.constraint.ConstraintLayout>

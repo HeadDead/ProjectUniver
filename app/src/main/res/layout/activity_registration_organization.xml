@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationOrganizationActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Иванов"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_200"
+                android:textAlignment="center"
+                android:textColorHint="@color/green_200"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/name"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Иван"
+                android:backgroundTint="@color/green_200"
+                android:textAlignment="center"
+                android:textColorHint="@color/green_200"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/patronymic"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:textAlignment="center"
+                android:hint="Иванович"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:textColor="@color/white"
+                android:inputType="phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:layout_marginTop="10dp"
+                android:hint="+79328883252"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/email"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="name@email.ru"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/username"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="ivan_0v"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/password"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/organizationFullName"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="ООО Автомойка Блеск"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/organizationShortName"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="Мойка"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/inn"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:layout_marginTop="10dp"
+                android:hint="ИНН"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/kpp"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="КПП"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/ogrn"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="ОГРН"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/subjectName"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="Самарская обл"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/cityName"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="Самара"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/streetName"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="ул Советской Армии"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/houseNumber"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:hint="д 56"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/addInfo"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Напротив школы"
+                android:backgroundTint="@color/green_200"
+                android:textColorHint="@color/green_200"
+                android:textAlignment="center"
+                android:textSize="10pt" />
+
+            <Button
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="Зарегистрироваться"
+                android:textColor="@color/gray_200"
+                android:textSize="8pt"
+                android:onClick="apply"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Михаил"
+            android:textColor="@color/green_200"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:text="Шуфутинский"
+            android:textColor="@color/green_200"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/patronymic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Захарович"
+            android:textColor="@color/green_200"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="+79326554555"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="michael"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="michael@mail.ru"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/organization_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Автомойка У Михаила"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/organization_short_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="У Михаила"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/inn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="123456"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/kpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="456789"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/ogrn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="243685"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/subject_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Самарская область"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="г. Самара"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/street_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="ул. Советской Армии"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/house_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="д.69"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/add_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Дополнительная информация"
+            android:textSize="10pt" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="Подтвердить"
+            android:onClick="approveButton"
+            android:textSize="10pt"/>
+
+    </LinearLayout>
+
+</LinearLayout>
