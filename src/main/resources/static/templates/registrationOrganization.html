@@ -13,28 +13,29 @@
     <link rel="stylesheet" href="../css/rostov.css">
 </head>
 <body>
+ <!--не все поля здесь представлены-->
 <div class="container">
     <h2>Регистрация организации</h2>
-    <form>
+    <form action="#" th:action="@{/auth/registration}" method="post">
         <div class="form-group">
             <label for="firstName">Имя:</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Введите имя" required>
+            <input type="firstName" class="form-control" id="firstName" placeholder="Введите имя" required>
         </div>
         <div class="form-group">
             <label for="lastName">Фамилия:</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию" required>
+            <input type="lastName" class="form-control" id="lastName" placeholder="Введите фамилию" required>
         </div>
         <div class="form-group">
             <label for="patronymic">Отчество:</label>
-            <input type="text" class="form-control" id="patronymic" placeholder="Введите отчество" required>
+            <input type="patronymic" class="form-control" id="patronymic" placeholder="Введите отчество" required>
         </div>
         <div class="form-group">
             <label for="phoneNumber">Номер телефона:</label>
-            <input type="text" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" required>
+            <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" required>
         </div>
         <div class="form-group">
-            <label for="login">Логин:</label>
-            <input type="text" class="form-control" id="login" placeholder="Введите логин" required>
+            <label for="username">Логин:</label>
+            <input type="username" class="form-control" id="username" placeholder="Введите логин" required>
         </div>
         <div class="form-group">
             <label for="password">Пароль:</label>
@@ -46,32 +47,33 @@
         </div>
         <div class="form-group">
             <label for="organizationFullName">Полное название организации:</label>
-            <input type="text" class="form-control" id="organizationFullName"
+            <input type="organizationFullName" class="form-control" id="organizationFullName"
                    placeholder="Введите полное название организации" required>
         </div>
         <div class="form-group">
             <label for="organizationShortName">Краткое название организации:</label>
-            <input type="text" class="form-control" id="organizationShortName"
+            <input type="organizationShortName" class="form-control" id="organizationShortName"
                    placeholder="Введите краткое название организации" required>
         </div>
         <div class="form-group">
             <label for="inn">ИНН:</label>
-            <input type="text" class="form-control" id="inn" placeholder="Введите ИНН" required>
+            <input type="inn" class="form-control" id="inn" placeholder="Введите ИНН" required>
         </div>
         <div class="form-group">
             <label for="kpp">КПП:</label>
-            <input type="text" class="form-control" id="kpp" placeholder="Введите КПП" required>
+            <input type="kpp" class="form-control" id="kpp" placeholder="Введите КПП" required>
         </div>
         <div class="form-group">
             <label for="ogrn">ОГРН:</label>
-            <input type="text" class="form-control" id="ogrn" placeholder="Введите ОГРН" required>
+            <input type="ogrn" class="form-control" id="ogrn" placeholder="Введите ОГРН" required>
         </div>
         <div class="form-group">
             <label for="address">Юридический адрес:</label>
-            <input type="text" class="form-control" id="address" placeholder="Введите юридический адрес" required>
+            <input type="address" class="form-control" id="address" placeholder="Введите юридический адрес" required>
         </div>
         <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
     </form>
 </div>
 </body>
+<footer><img src="../images/Logo1_1.png"></footer>
 </html>

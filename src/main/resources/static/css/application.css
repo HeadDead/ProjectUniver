@@ -1,7 +1,6 @@
 body {
     background-color: #191919;
     color: #d4f8f1;
-
 }
 
 body,
@@ -10,6 +9,18 @@ button,
 label {
     font-family: 'Rostov', sans-serif;
 }
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 h2 {
     color: #77d3c1;
     font-size: 36px;
@@ -25,48 +36,8 @@ label {
     margin-bottom: 5px;
     letter-spacing: 2pt;
 }
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .form-group {
     margin-bottom: 30px;
-}
-
-.form-control {
-    background-color: #cef7ef;
-    color: #191919;
-    border: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.btn-primary {
-    background-color: #01a0db;
-    border-color: #01a0db;
-}
-
-.btn-primary:hover {
-    background-color: #02a686;
-    border-color: #02a686;
-}
-
-.btn-primary:focus,
-.btn-primary:active {
-    background-color: #01a0db;
-    border-color: #01a0db;
-    box-shadow: none;
-}
-
-input:focus {
-    box-shadow: 0 0 0 0.2rem #01a0db;
 }
 
 .form-control {
@@ -88,13 +59,24 @@ input:focus {
     border: 10px;
     border-radius: 5px;
     font-size: 16px;
+
 }
+.btn-primary {
+    background-color: #01a0db;
+    border-color: #01a0db;
+}
+
+.btn-primary:hover {
+    background-color: #02a686;
+    border-color: #02a686;
+}
+
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
     background-position: left;
     padding: 20px;
 }

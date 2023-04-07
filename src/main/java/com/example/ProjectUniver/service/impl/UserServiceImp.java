@@ -115,7 +115,8 @@ public class UserServiceImp implements UserService {
 
         }
 
-        User user = new User(registrationOrganizationDto.getEmail(),registrationOrganizationDto.getUsername(), passwordEncoder.encode(registrationOrganizationDto.getPassword()), registrationOrganizationDto.getFirstName(),
+        User user = new User(registrationOrganizationDto.getEmail(),registrationOrganizationDto.getUsername(),
+                passwordEncoder.encode(registrationOrganizationDto.getPassword()), registrationOrganizationDto.getFirstName(),
                 registrationOrganizationDto.getLastName(), registrationOrganizationDto.getPatronymic(), registrationOrganizationDto.getPhoneNumber());
 
         String requestRole = registrationOrganizationDto.getRole();

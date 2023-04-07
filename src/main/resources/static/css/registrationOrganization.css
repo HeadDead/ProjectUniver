@@ -16,6 +16,7 @@ label {
     font-family: 'Rostov', sans-serif;
 }
 
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -43,7 +44,7 @@ input[type="email"] {
     background-color: #c5e5ef;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: #191919;
     font-size: 16px;
     height: 40px;
     margin-bottom: 20px;
@@ -58,20 +59,26 @@ input[type="email"]:focus {
     outline: none;
 }
 
+form {
+    flex-direction: column;
+}
+
 .btn-primary {
     background-color: #01a0db;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease-in-out;
-    letter-spacing: 2pt
+    border-color: #01a0db;
+    width: 100%;
 }
 
 .btn-primary:hover {
-    background-color: #02ee96;
+    background-color: #02a686;
+    border-color: #02a686;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #01a0db;
+    border-color: #01a0db;
+    box-shadow: none;
 }
 
 /* Стили для отдельных элементов */
@@ -114,7 +121,7 @@ input[type="email"]:focus {
 }
 
 .form-control {
-    background-color: #cef7ef;
+    background-color: #c5e5ef;
     color: #191919;
     border: 10px;
     border-radius: 5px;
@@ -134,20 +141,19 @@ input[type="email"]:focus {
     font-size: 16px;
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: red;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    background-position: left;
+    padding: 10px;
+    justify-content: left;
+
 }
 
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: red;
-}
-
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: red;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: red;
+footer img {
+    height: 50px; /* Задайте желаемую высоту для изображения */
 }
 
 

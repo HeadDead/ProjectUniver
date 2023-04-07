@@ -1,0 +1,101 @@
+body {
+    background-color: #191919;
+}
+body,
+input,
+button,
+label {
+    font-family: 'Rostov', sans-serif;
+}
+
+h1 {
+    color: black;
+}
+
+label {
+    color: #000000;
+}
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+}
+form {
+    border: 2px solid #686767;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    background-color: #d4f8f1;
+    border: 2px solid #686767;
+    border-radius: 5px;
+    color: #191919;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: #02a686;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #01a0db;
+    cursor: pointer;
+}
+
+select option[value=""] {
+    display: none;
+}
+
+select option {
+    background-color: #ffffff;
+    color: #191919;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    background-position: left;
+    padding: 20px;
+}
+
+footer img {
+    height: 50px; /* Задайте желаемую высоту для изображения */
+}
+.form-control {
+    background-color: #d4f8f1;
+    color: #191919;
+    border: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+.form-control:focus::placeholder {
+    color: #191919;
+    border: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form-control::placeholder {
+    color: #000000;
+    border: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}

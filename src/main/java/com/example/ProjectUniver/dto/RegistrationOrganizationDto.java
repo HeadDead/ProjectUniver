@@ -1,5 +1,6 @@
 package com.example.ProjectUniver.dto;
 
+import com.example.ProjectUniver.entity.ERole;
 import lombok.Data;
 
 @Data
@@ -12,7 +13,7 @@ public class RegistrationOrganizationDto {
     private String username;
     private String password;
     private String email;
-    private String role;
+    private String role = ERole.ROLE_ORGANIZATION.name();
     private String organizationFullName;
     private String organizationPassword;
     private String organizationShortName;

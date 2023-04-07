@@ -82,7 +82,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
                 .authorizeRequests()
                 .antMatchers("/auth/**", "/swagger-ui/**", "/forgot_password/**", "/event/photos/**",
                         "/swagger-ui/**", "/forgot_password/**", "/event/photos/**",
-                        "/confirm-account", "/index", "/js/**", "/webapps/**").permitAll()
+                        "/confirm-account", "/index", "/js/**", "/webapps/**", "/css/**", "/fonts/**", "/images/**").permitAll()
                 .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .antMatchers("/organization/**").hasAuthority("ROLE_ORGANIZATION")
                 .anyRequest().authenticated();

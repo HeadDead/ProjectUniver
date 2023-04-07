@@ -8,11 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/application.css">
+    <link rel="stylesheet" href="../css/rostov.css">
 </head>
 <body>
 <div class="container">
     <h2>Создание услуги</h2>
-    <form action="#" th:action="@{/application}" th:object="${application}" method="post">
+    <form>
         <div class="form-group">
             <label for="firstName">Название услуги:</label>
             <input type="text" class="form-control" id="firstName" placeholder="Введите название услуги" required>
@@ -28,10 +30,8 @@
         <button type="submit" class="btn btn-primary">Создать услугу</button>
     </form>
 </div>
-<script th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.min.js}"></script>
 </body>
+<footer>
+    <img src="../images/Logo1_1.png">
+</footer>
 </html>
-
-<!--Здесь мы используем Thymeleaf для обхода списка услуг, который предполагается хранить в модели как коллекцию.
-Для каждого элемента коллекции мы генерируем элемент <option> с атрибутами value и text, используя соответствующие поля объекта Service из списка.
-Вы можете изменить настройки вывода элементов <option> с помощью Thymeleaf, чтобы подстроить их под свои потребности.-->

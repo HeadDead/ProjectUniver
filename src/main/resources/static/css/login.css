@@ -32,11 +32,11 @@ h1 {
 
 /* Стили для формы */
 form {
-    display: flex;
-    flex-direction: column;
+    border: 2px solid #686767;
+    padding: 20px;
+    border-radius: 5px;
 }
 .login {
-
     color: #191919;
 }
 .password {
@@ -80,11 +80,13 @@ form {
     padding: 10px;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out;
+    width: 100%;
 }
 
 .btn-primary:hover {
     background-color: #02a686;
 }
+
 
 /* Стили для обязательного поля ввода */
 input[required] {
@@ -104,4 +106,17 @@ input[required]:focus {
 }
 .input:focus {
     border: 10px black;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-position: left;
+    padding: 20px;
+}
+
+footer img {
+    height: 50px; /* Задайте желаемую высоту для изображения */
 }
