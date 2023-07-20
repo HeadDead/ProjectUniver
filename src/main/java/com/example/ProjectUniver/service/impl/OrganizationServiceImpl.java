@@ -1,10 +1,11 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.repository.AddressRepository;
 import com.example.ProjectUniver.repository.AddressTypeRepository;
 import com.example.ProjectUniver.repository.OrganizationRepository;
 import com.example.ProjectUniver.repository.UserRepository;
+import com.example.ProjectUniver.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
@@ -31,8 +32,7 @@ public class OrganizationServiceImpl implements OrganizationService {
     @Override
     public Organization findOrganizationByLogin(String login) {
         User user = userRepository.findUserByLogin(login);
-        Organization organization = user.getOrganization();
-        return organization;
+        return user.getOrganization();
     }
 
 }

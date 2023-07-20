@@ -1,4 +1,4 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
 import com.example.ProjectUniver.config.jwt.JwtUtils;
 import com.example.ProjectUniver.dto.*;
@@ -6,11 +6,11 @@ import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.exception.GlobalException;
 import com.example.ProjectUniver.repository.RoleRepository;
 import com.example.ProjectUniver.repository.UserRepository;
+import com.example.ProjectUniver.service.OrganizationService;
+import com.example.ProjectUniver.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -106,16 +106,17 @@ public class UserServiceImp implements UserService {
     public MessageResponse registration(RegistrationOrganizationDto registrationOrganizationDto) {
         if (actorRepository.existsByLogin(registrationOrganizationDto.getUsername())) {
 //            throw new GlobalException("Ошибка: Пользователь с таким логином уже зарегистрирован!", HttpStatus.BAD_REQUEST);
-            return new MessageResponse("Ошибка: Пользователь с таким логином уже зарегистрирован!");
+            return new MessageResponse("Ошибка: Организация с таким логином уже зарегистрирована!");
         }
 
         if (actorRepository.existsActorByEmail(registrationOrganizationDto.getEmail())) {
 //            throw new GlobalException("Ошибка: Пользователь с таким email уже зарегестрирован", HttpStatus.BAD_REQUEST);
-            return new MessageResponse("Ошибка: Пользователь с таким email уже зарегистрирован!");
+            return new MessageResponse("Ошибка: Организация с таким email уже зарегистрирована!");
 
         }
 
-        User user = new User(registrationOrganizationDto.getEmail(),registrationOrganizationDto.getUsername(), passwordEncoder.encode(registrationOrganizationDto.getPassword()), registrationOrganizationDto.getFirstName(),
+        User user = new User(registrationOrganizationDto.getEmail(),registrationOrganizationDto.getUsername(),
+                passwordEncoder.encode(registrationOrganizationDto.getPassword()), registrationOrganizationDto.getFirstName(),
                 registrationOrganizationDto.getLastName(), registrationOrganizationDto.getPatronymic(), registrationOrganizationDto.getPhoneNumber());
 
         String requestRole = registrationOrganizationDto.getRole();
@@ -123,8 +124,8 @@ public class UserServiceImp implements UserService {
 
         switch (requestRole) {
             case "ROLE_ORGANIZATION":
-                Role roleStudent = roleRepository.findByName(ERole.ROLE_USER)
-                        .orElseThrow(() -> new GlobalException("Роль 'Пользователь' не найдена", HttpStatus.BAD_REQUEST));
+                Role roleStudent = roleRepository.findByName(ERole.ROLE_ORGANIZATION)
+                        .orElseThrow(() -> new GlobalException("Роль 'Организация' не найдена", HttpStatus.BAD_REQUEST));
                 roles.add(roleStudent);
                 break;
         }
@@ -138,7 +139,7 @@ public class UserServiceImp implements UserService {
         organizationService.createOrganization(organization, address, addressType);
         user.setOrganization(organization);
         actorRepository.save(user);
-        return new MessageResponse("Пользователь " + user.getLogin() + " успешно зарегистрирован!");
+        return new MessageResponse("Организация " + user.getLogin() + " успешно зарегистрирована, ожидайте её подтверждения!");
     }
 
 

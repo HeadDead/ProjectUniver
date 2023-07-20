@@ -1,13 +1,11 @@
-package com.example.ProjectUniver.service;
+package com.example.ProjectUniver.service.impl;
 
-import com.example.ProjectUniver.entity.Address;
-import com.example.ProjectUniver.entity.AddressType;
-import com.example.ProjectUniver.entity.Application;
-import com.example.ProjectUniver.entity.ServiceDop;
+import com.example.ProjectUniver.entity.*;
 import com.example.ProjectUniver.repository.AddressRepository;
 import com.example.ProjectUniver.repository.AddressTypeRepository;
 import com.example.ProjectUniver.repository.ApplicationRepository;
 import com.example.ProjectUniver.repository.ServiceDopRepository;
+import com.example.ProjectUniver.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class ApplicationServiceImpl implements ApplicationService{
+public class ApplicationServiceImpl implements ApplicationService {
     @Autowired
     private ApplicationRepository applicationRepository;
     @Autowired
@@ -27,13 +25,13 @@ public class ApplicationServiceImpl implements ApplicationService{
     public void createApplication(Application event, ServiceDop serviceDop) {
         //event.setCurrentDate(LocalDate.now());
         ServiceDop serviceDop1 = serviceDopRepository.save(serviceDop);
-        Set<ServiceDop>serviceDopSet= new HashSet<>();
+        List<ServiceDop>serviceDopSet= new ArrayList<>();
         serviceDopSet.add(serviceDop1);
         event.setServiceDop(serviceDopSet);
-       // AddressType addressType1 = addressTypeRepository.save(addressType);
+        //AddressType addressType1 = addressTypeRepository.save(addressType);
         //address.setAddressType(addressType1);
-       // Address address1 = addressRepository.save(address);
-        Application savedEvent = applicationRepository.save(event);
+        //Address address1 = addressRepository.save(address);
+        applicationRepository.save(event);
     }
 
     @Override

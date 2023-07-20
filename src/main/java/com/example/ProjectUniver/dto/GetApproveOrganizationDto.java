@@ -4,11 +4,9 @@ import com.example.ProjectUniver.entity.Address;
 import lombok.Data;
 
 import java.util.List;
-import java.util.Set;
 
 @Data
-public class GetOrganizationDto {
-    private Integer id;
+public class GetApproveOrganizationDto {
     private String firstName;
     private String lastName;
     private String patronymic;
@@ -23,8 +21,7 @@ public class GetOrganizationDto {
     private List<Address> address;
     private Boolean approve;
 
-    public GetOrganizationDto(Integer id, String firstName, String lastName, String patronymic, String phoneNumber, String username, String email, String organizationFullName, String organizationShortName, String inn, String kpp, String ogrn, Boolean approve) {
-        this.id = id;
+    public GetApproveOrganizationDto(String firstName, String lastName, String patronymic, String phoneNumber, String username, String email, String organizationFullName, String organizationShortName, String inn, String kpp, String ogrn, Boolean approve) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronymic = patronymic;
@@ -39,5 +36,4 @@ public class GetOrganizationDto {
         this.approve = approve;
         //this.address = addressSet;
     }
-
 }

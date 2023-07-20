@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Авторизация</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/rostov.css">
+    </head>
+<body>
+<div class="container my-5">
+    <h1>Авторизация</h1>
+    <form class="formLogin">
+        <div class="form-group">
+            <label class="login">Логин:</label>
+            <input type="text" class="form-control" id="loginUserName" placeholder="Введите логин" name="username"
+                   required>
+        </div>
+        <div class="form-group">
+            <label class="password">Пароль:</label>
+            <input type="password" class="form-control" id="password" placeholder="Введите пароль" name="password"
+                   required>
+            <div class="input-group-append">
+                <button type="button" class="btn btn-light" onclick="showPassword()">Показать</button>
+            </div>
+        </div>
+        <button id="login" type="button" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+
+<script type="text/javascript" src="../js/showPassword.js"></script>
+<script type="text/javascript" src="../js/login.js"></script>
+</body>
+<footer><img src="../images/Logo1_1.png"></footer>
+</html>
